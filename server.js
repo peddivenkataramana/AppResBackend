@@ -6,7 +6,15 @@ const orderRoutes = require("./routes/orders"); // Import routes
 
 const app = express();
 const port = process.env.PORT || 10000;
-
+const allowedOrigins = [
+  "https://peddivenkataramana.github.io/AppRes", // GitHub Pages URL
+];
+const corsOptions = {
+  origin: allowedOrigins,
+  methods: ["GET", "POST"],
+  allowedHeaders: ["Content-Type"],
+};
+app.use(cors(corsOptions));
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
