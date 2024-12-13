@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const orderRoutes = require("./routes/orders"); // Import routes
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 10000;
 
 // Middleware
 app.use(cors());
